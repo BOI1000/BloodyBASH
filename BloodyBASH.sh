@@ -18,7 +18,7 @@ Banner () {
     initColors
     echo -e "${bred}"
     cat << "EOF"
-______ _                 ___   _______  ___   _____ _   _ 
+______ _                 ___   _______  ___   _____ _   _
 | ___ \ |               | \ \ / / ___ \/ _ \ /  ___| | | |
 | |_/ / | ___   ___   __| |\ V /| |_/ / /_\ \\ `--.| |_| |
 | ___ \ |/ _ \ / _ \ / _` | \ / | ___ \  _  | `--. \  _  |
@@ -183,8 +183,8 @@ MAIN() {
             "Set "*|"set "*) args=($input); unset args[0]; Set "${args[@]}";;
             "JQ "*) JQ "${input#JQ }";;
             "findUsers "*) findUsers "${input#findUsers }";;
-	    # Split
-	    "listUsers") listUsers;;
+            # Split
+            "listUsers") listUsers;;
             "listUserKeys") listUserKeys;;
             "listUserValues") listUserValues;;
             *) if [ -n "$input" ];then bash -c "$input" 2>/dev/null;fi;;
